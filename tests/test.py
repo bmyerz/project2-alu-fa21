@@ -14,7 +14,8 @@ import csv
 import abc
 
 file_locations = os.path.expanduser(os.getcwd())
-logisim_location = os.path.join(os.getcwd(),"logisim.jar")
+#logisim_location = os.path.join(os.getcwd(),"logisim.jar")
+logisim_location = "logisim.jar"
 
 
 class TestCase():
