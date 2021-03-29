@@ -167,6 +167,23 @@ tests = [
                   [13, 0, 1, 0x00000000],
                   [14, 0, 1, 0x00000000],
                   [15, 0, 1, 0x00000000]]), "alu"),
+  ("ALU Control R-type Test",
+    TestCase(os.path.join(file_locations, 'alu-control-Rtype-test.circ'),
+        [[0, 5],
+         [1, 6],
+         [2, 7],
+         [3, 8],
+         [4, 9],
+         [5, 0],
+         [6, 1]]), "alu-control"),
+  ("ALU Control I-type Test",
+    TestCase(os.path.join(file_locations, 'alu-control-Itype-test.circ'),
+        [[0, 9],
+         [1, 8],
+         [2, 0],
+         [3, 1],
+         [4, 9],
+         [5, 9]]), "alu-control")
 ]
 
 if __name__ == '__main__':
