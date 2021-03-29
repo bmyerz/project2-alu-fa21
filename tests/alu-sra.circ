@@ -133,7 +133,7 @@
       <a name="valign" val="base"/>
     </tool>
   </lib>
-  <lib desc="file#alu.circ" name="7"/>
+  <lib desc="file#/Users/bdmyers/OneDrive - University of Iowa/uiowa/2630/cs2630_materials/project2/sp21/hw4/project2-alu/tests/alu.circ" name="7"/>
   <main name="main"/>
   <options>
     <a name="gateUndefined" val="ignore"/>
@@ -207,21 +207,6 @@
     <wire from="(100,50)" to="(170,50)"/>
     <wire from="(40,100)" to="(40,160)"/>
     <wire from="(430,150)" to="(630,150)"/>
-    <comp lib="3" loc="(140,130)" name="Adder"/>
-    <comp lib="6" loc="(412,64)" name="Text">
-      <a name="text" val="YOUR ALU SHOULD FIT HERE"/>
-    </comp>
-    <comp lib="4" loc="(330,190)" name="ROM">
-      <a name="dataWidth" val="32"/>
-      <a name="contents">addr/data: 8 32
-deadbeef f0000000 0 feedf00d
-</a>
-    </comp>
-    <comp lib="0" loc="(180,30)" name="Constant">
-      <a name="width" val="8"/>
-      <a name="value" val="0xf"/>
-    </comp>
-    <comp lib="4" loc="(80,160)" name="Register"/>
     <comp lib="0" loc="(630,150)" name="Pin">
       <a name="facing" val="west"/>
       <a name="output" val="true"/>
@@ -229,18 +214,31 @@ deadbeef f0000000 0 feedf00d
       <a name="label" val="Result"/>
       <a name="labelloc" val="east"/>
     </comp>
+    <comp lib="0" loc="(180,30)" name="Constant">
+      <a name="width" val="8"/>
+      <a name="value" val="0xf"/>
+    </comp>
+    <comp lib="4" loc="(80,160)" name="Register"/>
+    <comp lib="4" loc="(330,190)" name="ROM">
+      <a name="dataWidth" val="32"/>
+      <a name="contents">addr/data: 8 32
+deadbeef f0000000 0 feedf00d
+</a>
+    </comp>
+    <comp lib="6" loc="(443,407)" name="Text">
+      <a name="text" val="There should be no blue/red wires here, and the result shouldn't be x's."/>
+    </comp>
     <comp lib="0" loc="(570,80)" name="Pin">
       <a name="facing" val="west"/>
       <a name="output" val="true"/>
       <a name="label" val="Signed Overflow"/>
       <a name="labelloc" val="east"/>
     </comp>
-    <comp lib="0" loc="(100,40)" name="Pin">
-      <a name="facing" val="south"/>
-      <a name="output" val="true"/>
-      <a name="width" val="8"/>
-      <a name="label" val="Test #"/>
-      <a name="labelloc" val="north"/>
+    <comp lib="3" loc="(240,40)" name="Comparator">
+      <a name="mode" val="unsigned"/>
+    </comp>
+    <comp lib="0" loc="(60,200)" name="Clock">
+      <a name="facing" val="north"/>
     </comp>
     <comp lib="4" loc="(330,110)" name="ROM">
       <a name="dataWidth" val="32"/>
@@ -248,24 +246,12 @@ deadbeef f0000000 0 feedf00d
 22 12 22
 </a>
     </comp>
-    <comp lib="4" loc="(330,330)" name="ROM">
-      <a name="dataWidth" val="4"/>
-      <a name="contents">addr/data: 8 4
-32*b
-</a>
-    </comp>
     <comp lib="7" loc="(400,150)" name="main"/>
-    <comp lib="3" loc="(240,40)" name="Comparator">
-      <a name="mode" val="unsigned"/>
-    </comp>
     <comp lib="0" loc="(260,40)" name="Pin">
       <a name="facing" val="west"/>
       <a name="output" val="true"/>
       <a name="label" val="halt"/>
       <a name="labelloc" val="east"/>
-    </comp>
-    <comp lib="6" loc="(443,407)" name="Text">
-      <a name="text" val="There should be no blue/red wires here, and the result shouldn't be x's."/>
     </comp>
     <comp lib="0" loc="(90,120)" name="Constant">
       <a name="width" val="8"/>
@@ -276,8 +262,22 @@ deadbeef f0000000 0 feedf00d
       <a name="label" val="Equal"/>
       <a name="labelloc" val="east"/>
     </comp>
-    <comp lib="0" loc="(60,200)" name="Clock">
-      <a name="facing" val="north"/>
+    <comp lib="3" loc="(140,130)" name="Adder"/>
+    <comp lib="4" loc="(330,330)" name="ROM">
+      <a name="dataWidth" val="4"/>
+      <a name="contents">addr/data: 8 4
+32*7
+</a>
+    </comp>
+    <comp lib="0" loc="(100,40)" name="Pin">
+      <a name="facing" val="south"/>
+      <a name="output" val="true"/>
+      <a name="width" val="8"/>
+      <a name="label" val="Test #"/>
+      <a name="labelloc" val="north"/>
+    </comp>
+    <comp lib="6" loc="(412,64)" name="Text">
+      <a name="text" val="YOUR ALU SHOULD FIT HERE"/>
     </comp>
   </circuit>
 </project>
