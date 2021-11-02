@@ -150,7 +150,7 @@ tests = [
                   [14, 0, 1, 0x00000000],
                   [15, 0, 1, 0x00000000]]), "alu"),
   ("ALU arithmetic right shift test",
-        TestCase(os.path.join(file_locations,'alu-sra.circ'),
+        TestCase(os.path.join(file_locations,'alu-asr.circ'),
                 [[0, 0, 0, 0xF7AB6FBB],
                  [1, 0, 0, 0xFFFFFC00],
                  [2, 0, 0, 0x00000000],
